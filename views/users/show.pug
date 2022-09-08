@@ -1,0 +1,10 @@
+doctype html 
+html 
+ head 
+    title  Usuarios 
+ body 
+      h1=user.name
+      h2=user.password  
+      p=user.createdAt
+      form(action=`/users/${user.id}?_method=DELETE` method="POST")
+         button(type="sumbit" value="Eliminar") Eliminar 

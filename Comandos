@@ -1,0 +1,10 @@
+Sirve para crear una tabla en la base de datos
+/*sequelize model:generate --name User --attributes name:text,password:text*/
+/*sequelize db:migrate*/
+Genera los Sedders
+/*sequelize seed:generate --name generate_users*/
+Hace los registros de los sederes
+"Dato importante no debe de haber campos antes o habra error"
+/*sequelize db:seed:all*/
+"Sirve para elimar los seders hechos anteriormente"
+/*db:seed:undo:all*/

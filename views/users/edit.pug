@@ -1,0 +1,9 @@
+doctype html 
+html 
+ head 
+    title  Usuario 
+ body 
+   form(action=`/users/${user.id}?_method=PUT` method="POST")
+      input(type="text" name="name" value=`${user.name}`)
+      input(type="text" name="password" value=`${user.password}`)
+      button(type="sumbit" value="Guardar") Guardar 
