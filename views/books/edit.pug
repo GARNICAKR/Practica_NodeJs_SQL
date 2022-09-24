@@ -1,0 +1,9 @@
+doctype html 
+html 
+ head 
+    title  Libro 
+ body 
+   form(action=`/books/${book.id}?_method=PUT` method="POST")
+      input(type="text" name="name" value=`${book.name}`)
+      input(type="text" name="pages" value=`${book.pages}`)
+      button(type="sumbit" value="Guardar") Guardar 

@@ -1,0 +1,15 @@
+doctype html 
+html 
+ head 
+    title  Libro 
+ body 
+      h1=book.name
+      h2=book.pages  
+      p 
+         strong  Autor: 
+         span=book.user.name 
+
+      p=book.createdAt
+
+      form(action=`/books/${book.id}?_method=DELETE` method="POST")
+         button(type="sumbit" value="Eliminar") Eliminar 

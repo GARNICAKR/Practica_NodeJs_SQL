@@ -8,3 +8,5 @@ Hace los registros de los sederes
 /*sequelize db:seed:all*/
 "Sirve para elimar los seders hechos anteriormente"
 /*db:seed:undo:all*/
+"Crea una Migracion Usado para hacer Relaciones"
+/*sequelize migration:create --name add_user_id_to_books*/

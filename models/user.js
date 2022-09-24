@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: DataTypes.STRING,
   },{});
+  User.associate=function(models){
+    User.hasMany(models.Task,{ //Crea la relacion de muchas tareas a un usuario
+      as:'tasks'
+    });
+    User.hasMany(models.Book,{
+      as:'books'
+    });
+  };
   User.beforeCreate(async(user,options)=>{//Encripta la contraseña al crear un nuevo usuario
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);

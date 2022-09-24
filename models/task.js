@@ -5,5 +5,11 @@ module.exports = (sequelize, DataTypes) => {
   var Task= sequelize.define('Task',{
     description: DataTypes.TEXT
   },{});
+
+  Task.associate=function(models){
+    Task.belongsTo(models.User,{//Se crea la relacion task pertenece a usuario
+      as:'user' //Se le da un nombre en minuscula
+    });
+  };
   return Task;
 };

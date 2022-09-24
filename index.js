@@ -11,6 +11,7 @@ const authUser= require('./middleaware/auth_user');
 const tasksRoutes=require('./routes/tasks_routes');
 const usersRoutes=require('./routes/users_routes');
 const sessionsRoutes=require('./routes/sessions_routes');
+const booksRoutes=require('./routes/books_routes');
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -36,6 +37,7 @@ app.use(methodOverride('_method'));
 app.use(tasksRoutes);
 app.use(usersRoutes);
 app.use(sessionsRoutes);
+app.use(booksRoutes);
 app.get('/',function(req,res){
     res.render('home',{user:req.user});
 });
